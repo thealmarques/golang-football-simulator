@@ -1,0 +1,180 @@
+{
+    "players": [
+        {
+            "name": "Courtois",
+            "age": 27,
+            "goalkeeping": 17,
+            "attack": 3,
+            "defense": 6,
+            "creativity": 4
+        },
+        {
+            "name": "Sergio Ramos",
+            "age": 29,
+            "goalkeeping": 3,
+            "attack": 12,
+            "defense": 16,
+            "creativity": 6
+        },
+        {
+            "name": "Varane",
+            "age": 25,
+            "goalkeeping": 2,
+            "attack": 4,
+            "defense": 17,
+            "creativity": 5
+        },
+        {
+            "name": "Marcelo",
+            "age": 28,
+            "goalkeeping": 2,
+            "attack": 15,
+            "defense": 16,
+            "creativity": 14
+        },
+        {
+            "name": "Daniel Carvajal",
+            "age": 25,
+            "goalkeeping": 2,
+            "attack": 15,
+            "defense": 15,
+            "creativity": 16
+        },
+        {
+            "name": "Casemiro",
+            "age": 27,
+            "goalkeeping": 2,
+            "attack": 13,
+            "defense": 16,
+            "creativity": 14
+        },
+        {
+            "name": "Kroos",
+            "age": 29,
+            "goalkeeping": 2,
+            "attack": 14,
+            "defense": 14,
+            "creativity": 18
+        },
+        {
+            "name": "V. Junior",
+            "age": 21,
+            "goalkeeping": 2,
+            "attack": 17,
+            "defense": 6,
+            "creativity": 15
+        },
+        {
+            "name": "Bale",
+            "age": 28,
+            "goalkeeping": 2,
+            "attack": 16,
+            "defense": 9,
+            "creativity": 18
+        },
+        {
+            "name": "Benzema",
+            "age": 31,
+            "goalkeeping": 2,
+            "attack": 18,
+            "defense": 4,
+            "creativity": 13
+        },
+        {
+            "name": "Jovic",
+            "age": 25,
+            "goalkeeping": 2,
+            "attack": 17,
+            "defense": 4,
+            "creativity": 15
+        },
+        {
+            "name": "Ter Stegen",
+            "age": 27,
+            "goalkeeping": 16,
+            "attack": 6,
+            "defense": 6,
+            "creativity": 4
+        },
+        {
+            "name": "Nelson Semedo",
+            "age": 24,
+            "goalkeeping": 3,
+            "attack": 14,
+            "defense": 14,
+            "creativity": 12
+        },
+        {
+            "name": "Pique",
+            "age": 30,
+            "goalkeeping": 2,
+            "attack": 11,
+            "defense": 16,
+            "creativity": 7
+        },
+        {
+            "name": "Lenglet",
+            "age": 22,
+            "goalkeeping": 2,
+            "attack": 6,
+            "defense": 16,
+            "creativity": 8
+        },
+        {
+            "name": "Alba",
+            "age": 29,
+            "goalkeeping": 2,
+            "attack": 15,
+            "defense": 15,
+            "creativity": 14
+        },
+        {
+            "name": "Rakitic",
+            "age": 32,
+            "goalkeeping": 2,
+            "attack": 15,
+            "defense": 13,
+            "creativity": 17
+        },
+        {
+            "name": "Kroos",
+            "age": 29,
+            "goalkeeping": 2,
+            "attack": 14,
+            "defense": 14,
+            "creativity": 18
+        },
+        {
+            "name": "Vidal",
+            "age": 32,
+            "goalkeeping": 2,
+            "attack": 17,
+            "defense": 15,
+            "creativity": 11
+        },
+        {
+            "name": "Fati",
+            "age": 19,
+            "goalkeeping": 2,
+            "attack": 16,
+            "defense": 9,
+            "creativity": 16
+        },
+        {
+            "name": "Messi",
+            "age": 33,
+            "goalkeeping": 2,
+            "attack": 19,
+            "defense": 4,
+            "creativity": 19
+        },
+        {
+            "name": "Griezmann",
+            "age": 29,
+            "goalkeeping": 2,
+            "attack": 17,
+            "defense": 4,
+            "creativity": 18
+        }
+    ]
+}
