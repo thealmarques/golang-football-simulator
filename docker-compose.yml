@@ -12,7 +12,7 @@ services:
     volumes:
       - pgdata:/var/lib/postgresql/data 
     networks:
-      - mce-network
+      - fs-network
   
   mce-app:
     restart: always
@@ -27,7 +27,7 @@ services:
       MSE_URL: mse-app
       MSE_PORT: 9000
     networks:
-      - mce-network
+      - fs-network
     depends_on:
       - mce-postgres
 
@@ -42,7 +42,7 @@ services:
     volumes:
       - pgdata:/var/lib/postgresql/data 
     networks:
-      - mce-network
+      - fs-network
   
   mse-app:
     restart: always
@@ -57,12 +57,12 @@ services:
       MCE_URL: mce-app
       MCE_PORT: 9000
     networks:
-      - mce-network
+      - fs-network
     depends_on:
       - mse-postgres
 
 networks: 
-  mce-network:
+  fs-network:
     driver: bridge
 
 volumes:
