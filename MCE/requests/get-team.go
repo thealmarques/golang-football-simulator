@@ -1,8 +1,8 @@
 package requests
 
 import (
-	"MSS/interfaces"
-	"MSS/models"
+	"MCE/interfaces"
+	"MCE/models"
 	"encoding/json"
 	"fmt"
 	"io/ioutil"
@@ -19,7 +19,7 @@ type PlayerResponse struct {
 
 func GetTeam(id uint) interfaces.Team {
 	var team interfaces.Team
-	url := fmt.Sprintf("%s%d", "http://localhost:9082/teams/", id)
+	url := fmt.Sprintf("%s%d", "http://0.0.0.0:9000/teams/", id)
 	response, err := http.Get(url)
 
 	if err != nil {
@@ -53,7 +53,7 @@ func GetTeam(id uint) interfaces.Team {
 }
 
 func GetPlayer(id string) models.Player {
-	url := fmt.Sprintf("%s%s", "http://localhost:9082/player/", id)
+	url := fmt.Sprintf("%s%s", "http://0.0.0.0:9000/player/", id)
 	response, err := http.Get(url)
 
 	if err != nil {

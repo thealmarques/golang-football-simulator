@@ -1,0 +1,70 @@
+version: '3.1'
+
+services:
+  mce-postgres:
+    restart: always
+    image: postgres
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: admin
+    ports:
+      - "15432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data 
+    networks:
+      - mce-network
+  
+  mce-app:
+    restart: always
+    build:
+      context: MCE/
+      dockerfile: Dockerfile
+    ports:
+      - "9082:9000"
+    environment:
+      DB_URL: mce-postgres
+      DB_PORT: 5432
+      MSE_URL: mse-app
+      MSE_PORT: 9000
+    networks:
+      - mce-network
+    depends_on:
+      - mce-postgres
+
+  mse-postgres:
+    restart: always
+    image: postgres
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: admin
+    ports:
+      - "25432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data 
+    networks:
+      - mce-network
+  
+  mse-app:
+    restart: always
+    build:
+      context: MSE/
+      dockerfile: Dockerfile
+    ports:
+      - "9083:9000"
+    environment:
+      DB_URL: mse-postgres
+      DB_PORT: 5432
+      MCE_URL: mce-app
+      MCE_PORT: 9000
+    networks:
+      - mce-network
+    depends_on:
+      - mse-postgres
+
+networks: 
+  mce-network:
+    driver: bridge
+
+volumes:
+  pgdata:
+    driver: local

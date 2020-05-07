@@ -14,7 +14,7 @@ import (
 )
 
 func Run(teams schemas.CreateSimulation, simulation models.Simulation, matchId uint) {
-	socketClient := NewSocketIO("http://localhost:9090/socketio/")
+	// socketClient := NewSocketIO("http://localhost:9090/socketio/")
 	home_factor := 10
 	home_power := getOverallPower(teams.HomeTeam) + home_factor
 	away_power := getOverallPower(teams.AwayTeam)
@@ -68,7 +68,7 @@ func Run(teams schemas.CreateSimulation, simulation models.Simulation, matchId u
 			simulation.Events = append(simulation.Events, strEvent)
 			simulation.Result = fmt.Sprintf("Result %d' %s %d - %d %s\n", i, teams.HomeTeam.Name, home_score, away_score, teams.AwayTeam.Name)
 			requests.UpdateSimulation(simulation)
-			socketClient.Emit(simulation.Result, matchId)
+			// socketClient.Emit(simulation.Result, matchId)
 			fmt.Println(simulation.Result)
 		}
 	}

@@ -1,9 +1,9 @@
 package main
 
 import (
-	"MSS/controllers"
-	"MSS/mock"
-	"MSS/models"
+	"MCE/controllers"
+	"MCE/mock"
+	"MCE/models"
 
 	"github.com/gin-gonic/gin"
 )
@@ -39,5 +39,5 @@ func main() {
 	router.GET("/player/:id", controllers.FindPlayer)
 	router.POST("/player", controllers.CreatePlayer)
 
-	router.Run("localhost:9082")
+	router.Run("0.0.0.0:9000")
 }

@@ -1,11 +1,14 @@
 package mock
 
-import "MSS/models"
+import (
+	"MCE/models"
+	"os"
+)
 
 // Postgres configuration
-const (
-	host     = "localhost"
-	port     = 15432
+var (
+	host     = os.Getenv("DB_URL")
+	port     = os.Getenv("DB_PORT")
 	user     = "admin"
 	password = "admin"
 	dbname   = "postgres"

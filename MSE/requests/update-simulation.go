@@ -14,7 +14,7 @@ func UpdateSimulation(simulation models.Simulation) {
 	jsonValue, _ := json.Marshal(values)
 
 	client := &http.Client{}
-	request, err := http.NewRequest(http.MethodPut, "http://localhost:9083/simulation", bytes.NewBuffer(jsonValue))
+	request, err := http.NewRequest(http.MethodPut, "http://0.0.0.0:9000/simulation", bytes.NewBuffer(jsonValue))
 	if err != nil {
 		panic(err)
 	}

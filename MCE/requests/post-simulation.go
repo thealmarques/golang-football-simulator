@@ -1,11 +1,13 @@
 package requests
 
 import (
-	"MSS/interfaces"
+	"MCE/interfaces"
 	"bytes"
 	"encoding/json"
+	"fmt"
 	"io/ioutil"
 	"net/http"
+	"os"
 )
 
 type Response struct {
@@ -17,7 +19,8 @@ func PostSimulation(home interfaces.Team, away interfaces.Team, matchId uint) in
 
 	jsonValue, _ := json.Marshal(values)
 
-	resp, err := http.Post("http://localhost:9083/simulation", "application/json", bytes.NewBuffer(jsonValue))
+	resp, err := http.Post(fmt.Sprintf("http://%s:%s/simulation", os.Getenv("MSE_URL"), os.Getenv("MSE_PORT")),
+		"application/json", bytes.NewBuffer(jsonValue))
 
 	if err != nil {
 		panic(err)

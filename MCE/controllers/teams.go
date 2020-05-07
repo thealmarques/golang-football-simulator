@@ -1,8 +1,8 @@
 package controllers
 
 import (
-	"MSS/models"
-	"MSS/schemas"
+	"MCE/models"
+	"MCE/schemas"
 	"net/http"
 
 	"github.com/gin-gonic/gin"

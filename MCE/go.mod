@@ -1,4 +1,4 @@
-module MSS
+module MCE
 
 go 1.14
 

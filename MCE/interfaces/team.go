@@ -1,6 +1,6 @@
 package interfaces
 
-import "MSS/models"
+import "MCE/models"
 
 type Team struct {
 	ID      uint

@@ -24,5 +24,5 @@ func main() {
 	router.POST("/simulation", controllers.CreateSimulation)
 	router.PUT("/simulation", controllers.UpdateSimulation)
 
-	router.Run("localhost:9083")
+	router.Run("0.0.0.0:9000")
 }
