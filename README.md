@@ -16,9 +16,9 @@ This architecture is a little bit tricky because it has a goroutine on one of th
 
 <img src="simulator.png" width="30%" height="30%">
 
-As we can see, upon a match request I create weighted probabilities using the overall team power of each team. Before I start the 90 minute game I generate the number of events during the match (in this case it will be the minutes) by using a custom rule (if power difference between teams is greater than X then Y, for example).
-During the match simulation if the current minute equals to an event I'll generate a random number between 0 and 1 to represent the team probability of that event belongs to them. This is done using an distributed probability method named Alias Method ([My other project](https://github.com/thealmarques/golang-alias-method-weighted-distribution)). In this simulation there is room to add more custom rules totally depending to you.
-All of the generated events are saved in a postgres database and sent to the user using a socket io connection (this last one is currently in beta phase).
+As we can see, upon a match request I create weighted probabilities using the overall team power of each team. Before I start the 90 minutes game I generate the number of events during the match (in this case it will be the minutes) by using a custom rule (if power difference between teams is greater than X then Y, for example).
+During the match simulation if the current minute equals to an event I'll generate a random number between 0 and 1 to represent the team probability of that event belongs to them. This is done using a distributed probability method named Alias Method ([My other project](https://github.com/thealmarques/golang-alias-method-weighted-distribution)). In this simulation, there is room to add more custom rules totally depending on you.
+All of the generated events are saved in a Postgres database and sent to the user using a socket io connection (this last one is currently in beta phase).
 
 ## How to Run
 
@@ -30,8 +30,12 @@ docker-compose up -d
 
 ## Todo
 
-[] Add auhentication
+[] Add authentication
+
 [] Add more rules to the match simulation
+
 [] Change MCE requests logic to use GORM queries to the database instead of HTTP requests
-[] Add socket io server to docker compose file
+
+[] Add socket io server to docker-compose file
+
 [] Finish socket io integration in the simulator
