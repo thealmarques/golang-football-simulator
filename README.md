@@ -1,4 +1,4 @@
-# Football Manager Simulator
+# Football Match Simulator
 
 This project implements a golang solution that uses microservices to simulate match games between two teams.
 Note that the implementation focus on the basic steps to implement one solution of these type, not focusing so much on internal rules to predict results.
