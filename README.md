@@ -30,12 +30,12 @@ docker-compose up --build -d
 
 ## Todo
 
-[] Add authentication
+[ ] Add authentication
 
-[] Add more rules to the match simulation
+[ ] Add more rules to the match simulation
 
-[] Change MCE requests logic to use GORM queries to the database instead of HTTP requests
+[ ] Change MCE requests logic to use GORM queries to the database instead of HTTP requests
 
-[] Add socket io server to docker-compose file
+[ ] Add socket io server to docker-compose file
 
-[] Finish socket io integration in the simulator
+[ ] Finish socket io integration in the simulator
