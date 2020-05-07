@@ -25,7 +25,7 @@ All of the generated events are saved in a Postgres database and sent to the use
 Run this docker command in the root folder.
 
 ```console
-docker-compose up -d
+docker-compose up --build -d
 ```
 
 ## Todo
